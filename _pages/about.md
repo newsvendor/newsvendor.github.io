@@ -2,23 +2,38 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Free. Open Source. <a href='https://donate.doctorswithoutborders.org/secure/donate'>Buy me a coffee ☕</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: newsvendor.png
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
 
-news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+
+news: false  # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+This website offers a **a game that allows you to experience the [newsvendor's problem](https://en.wikipedia.org/wiki/Newsvendor_model).** The game runs within a **[Pluto](https://github.com/fonsp/Pluto.jl)** notebook for **[Julia](https://julialang.org)**.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+The game comes with a **[mini case](https://github.com/frankhuettner/newsvendor/blob/main/scenarios/cheers_1_story.md)** which puts you into the shoes of a patiserrie owner. Every day, you have to make a choice about how many cakes 🍰🍥🎂 you want to produce. 
+     
+#### Let's Go!
+Setup takes 15 min for installing Julia, Pluto, and some packages (mostly unattendet). It requires about 1 GB disk space. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+1. Download Julia **[from the official website](https://julialang.org/downloads/)** and install it with the standard settings.
+2. Copy the code below. 
+```
+  begin
+  # Download the notebook into a temporary directory
+  nb = download("https://raw.githubusercontent.com/frankhuettner/newsvendor/main/simulation/newsvendorsimulation.jl", joinpath(mktempdir(), "newsvendorsimulation.jl"))
+  # Install Pluto
+  import Pkg;	Pkg.add("Pluto")
+  # Start Pluto and load the notebook
+  import Pluto; Pluto.run(notebook=nb)
+  end
+ ```
+3. Start Julia (e.g. in the Windows Start Menu)
+4. Rightclick into the Julia window. This will paste the code that you copied above. Hit the <kbd>Enter</kbd> key to execute the code.
+5. Now wait for 10 minutes. Julia will install Pluto and download the simulation. After about 5 minutes, it opens your browser and you see fragments of the simulation. It will install further packages and is finished once the animations stop. Get a ☕ or 🍵 or use your computer for something else while waiting (*do **not** close the Julia window*).
