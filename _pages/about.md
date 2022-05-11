@@ -17,7 +17,7 @@ social: false  # includes social icons at the bottom of the page
 
 This website offers a **a game that allows you to experience the [newsvendor's problem](https://en.wikipedia.org/wiki/Newsvendor_model).** The game runs within a **[Pluto](https://github.com/fonsp/Pluto.jl)** notebook for **[Julia](https://julialang.org)**.
 
-The game comes with a **[mini case](https://github.com/frankhuettner/newsvendor/blob/main/scenarios/cheers_1_story.md)** which puts you into the shoes of a patiserrie owner. Every day, you have to make a choice about how many cakes 🍰🍥🎂 you want to produce. 
+The game comes with a **[mini case](https://github.com/frankhuettner/newsvendor/blob/main/scenarios/cheers_1_story.md),** which puts you into the shoes of a patisserie owner. Every day, you have to make a choice about how many cakes 🍰🍥🎂 you want to produce. 
      
 #### Let's Go!
 Setup takes 15 min for installing Julia, Pluto, and some packages (mostly unattendet). It requires about 1 GB disk space. 
